@@ -1,4 +1,4 @@
-Host bastionNSO
+Host bastionET2598
     User ubuntu
     HostName <ip address>
     IdentityFile ~/.ssh/f1
