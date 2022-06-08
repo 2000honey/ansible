@@ -28,10 +28,6 @@
       src: application2.py 
       dest: /application2.py
 
-  - name: run the flask app
-    shell: |
-      nohup python3 application2.py > log.txt 2>&1 &
-
   - name: installing gunicorn
     apt:
       name: gunicorn
@@ -52,7 +48,7 @@
       state: restarted
       enabled: yes
 
-  - name: copy Application2.py
+  - name: copy application2.py
     copy:
       src: application2.py
       dest: /home/ubuntu/application2.py
@@ -93,7 +89,7 @@
       name: haproxy
       state: restarted
         
-  - name: installing Nginx
+  - name: installing nginx
     apt:
       name: nginx
       state: latest
@@ -111,12 +107,6 @@
 - hosts: webservers
   become: yes
   gather_facts: yes
-
-  tasks:
-
-  - name: system update on the webservers
-    apt:
-      update_cache: true
 
 
 
