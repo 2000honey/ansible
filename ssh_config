@@ -21,7 +21,7 @@ Host devA
     User ubuntu
     HostName <ip address>
     IdentityFile ~/.ssh/f1
-    ProxyCommand ssh -W %h:%p bastionNSO
+    ProxyCommand ssh -W %h:%p bastionET2598
     StrictHostKeyChecking no
     PasswordAuthentication no
 
@@ -29,7 +29,7 @@ Host devB
     User ubuntu
     HostName <ip address>
     IdentityFile ~/.ssh/f1
-    ProxyCommand ssh -W %h:%p bastionNSO
+    ProxyCommand ssh -W %h:%p bastionET2598
     StrictHostKeyChecking no
     PasswordAuthentication no
 
@@ -37,6 +37,6 @@ Host devC
     User ubuntu 
     HostName <ip address>
     IdentityFile ~/.ssh/f1
-    ProxyCommand ssh -W %h:%p bastionNSO
+    ProxyCommand ssh -W %h:%p bastionET2598
     StrictHostKeyChecking no
     PasswordAuthentication no
